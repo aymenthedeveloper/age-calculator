@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,700;1,400;1,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Age calculator app</title>
+</head>
+<body>
+  <main>
+    <div class="container">
+      <div class="input-fields">
+        <div class="input-group">
+          <label for="day">DAY</label>
+          <input type="text" id="day" placeholder="DD" oninput="checkDays()" maxlength="2">
+          <span class="error"></span>
+        </div>
+        <div class="input-group">
+          <label for="month">MONTH</label>
+          <input type="text" id="month" placeholder="MM" oninput="checkMonths()" maxlength="2">
+          <span class="error"></span>
+        </div>
+        <div class="input-group">
+          <label for="year">YEAR</label>
+          <input type="text" id="year" placeholder="YYYY" oninput="checkYears()" maxlength="4">
+          <span class="error"></span>
+        </div>
+      </div>
+      <div class="divider">
+        <div class="line"></div>
+        <button><img src="assets/images/icon-arrow.svg" alt=""></button>
+      </div>
+      <div class="results">
+        <p class="result"><span id="years">--</span>years</p>
+        <p class="result"><span id="months">--</span>months</p>
+        <p class="result"><span id="days">--</span>days</p>
+      </div>
+    </div>
+  </main>
+  <script src="main.js"></script>
+</body>
+</html>
