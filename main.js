@@ -61,10 +61,10 @@ document.querySelector('button').addEventListener('click', () => {
   }
   if (errors == 0) {
     const birth = new Date(`${Number(inputYear.value)}-${Number(inputMonth.value)}-${Number(inputDay.value)}`)
-    const diff =  Math.floor((today.getTime() - birth.getTime()) / (1000 * 3600 * 24));
-    document.getElementById('years').innerHTML = Math.floor(diff / 365);
-    document.getElementById('months').innerHTML = Math.floor((diff %365) / 30.5);
-    document.getElementById('days').innerHTML = Math.floor((diff %365) % 30.5);
+    let diff =  Math.floor((today.getTime() - birth.getTime()) / (1000 * 3600 * 24));
+    document.getElementById('years').innerHTML = Math.floor(diff / 365.25);
+    document.getElementById('months').innerHTML = Math.floor((diff % 365.25) / 30.416);
+    document.getElementById('days').innerHTML = Math.floor((diff % 365.25) % 30.416);
   }
 })
 
